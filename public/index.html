@@ -1,8 +1,29 @@
 <!doctype html>
 <html lang="ko">
+<head>
   <meta charset="UTF-8">
-  <title>GitHub Actions 연습</title>
-
-  <h1>두 번째 자동 배포 성공!</h1>
-  <p>GitHub Actions로 배포한 페이지입니다.</p>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>나의 덧셈 계산기</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./calculator.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">MY FIRST PROJECT</p>
+    <h1>덧셈 계산기</h1>
+    <p>양수, 음수, 소수를 더해보세요.</p>
+    <form id="calculator" novalidate>
+      <label for="first">첫 번째 숫자</label>
+      <input id="first" name="first" type="number" step="any" placeholder="예: -2.5" required>
+      <label for="second">두 번째 숫자</label>
+      <input id="second" name="second" type="number" step="any" placeholder="예: 10" required>
+      <div class="buttons">
+        <button type="submit">계산하기</button>
+        <button type="reset" class="secondary">초기화</button>
+      </div>
+    </form>
+    <p id="result" role="status" aria-live="polite">두 숫자를 입력하고 계산해보세요.</p>
+  </main>
+</body>
 </html>
